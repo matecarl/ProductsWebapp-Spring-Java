@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>KurioCITY</title>
+    <style>
+        table {
+            border: 1px solid;
+        }
+
+        tbody>tr {
+            height: 80px;
+        }
+
+        table a{
+            text-decoration: none;
+        }
+
+        td>img {
+            height: 60px;
+            width: 100%;
+            object-fit: cover;
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <header th:insert="~{components/header::navbar}"></header>
+
+    <main>
+        <div class="container" style="width: 600px; padding: 40px 0">
+
+            <h1 class="display-3">Producten</h1>
+            <h2 th:if="${searchInfo != null}" th:text="${searchInfo}"></h2>
+            <br>
+
+            <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Afbeelding</th>
+                        <th>Product</th>
+                        <th>Vraagprijs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     <tr th:each="product : ${products}">
+                         <td style="width: 140px">
+                             <img th:if="${not #strings.isEmpty(product.afbeeldingUrl)}" th:src="${product.afbeeldingUrl}" class="border"/>
+                         </td>
+                         <td>
+                             <a th:href="@{products/{id}(id = ${product.id})}" th:text="${product.naam}"></a>
+                         </td>
+                         <td>
+                             €<span th:text="${product.vraagPrijs}"></span>
+                         </td>
+                     </tr>
+                </tbody>
+            </table>
+
+            <a  type="button" th:href="@{addproduct}" class="btn btn-primary">Zelf een product toevoegen</a>
+
+        </div>
+
+    </main>
+    <footer th:insert="~{components/footer::footer}"></footer>
+
+</body>
+</html>

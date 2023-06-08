@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>About</title>
+</head>
+<body>
+  <header th:insert="~{components/header::navbar}"></header>
+  <main>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" style="padding: 50px; background-color: #e9ecef">
+      <div class="container">
+        <h1 class="display-3">Welcome, op KurioCITY</h1>
+        <p>Welkom op de markt van de dappere ontwikkelaar! Er is een enorm aanbod aan tools en services om je creativiteit op te botvieren. Je zult je kostbare tijd niet besteden aan het vinden van dingen, maar aan het uitvinden van nieuwe en krachtige use cases. We stellen een heel assortiment aan prachtige Jars, Wars, en dependencies tot je beschikking.</p>
+        <p><a class="btn btn-primary btn-lg" href="@{/}" role="button">Bekijk de producten »</a></p>
+      </div>
+    </div>
+
+    <div class="container" style="padding: 50px">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-secondary" href="#" role="button">Bekijk details »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-secondary" href="#" role="button">Bekijk details »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">Bekijk details »</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="container" style="width: 1000px; margin-top: 30px">
+        <h1>Locatie</h1>
+        <p>Adres: Nijverheidskaai 170, 1070 Anderlecht</p>
+        <br>
+        <h2>Contact</h2>
+        <p>Bel ons: <a href="tel: 02 654 45 49">02 654 45 49</a></p>
+      </div>
+
+    </div>
+
+  </main>
+  <footer th:insert="~{components/footer::footer}"></footer>
+
+</body>
+</html>
